@@ -28,7 +28,7 @@ Study_hours	=st.number_input('Study Hours', min_value=1,max_value=10)
 if st.button ('Predict'):
     user_input = np.array([[age, academic_pressure, gender, Dietary_habits, Sleep_duration, Family_record_M_Illness, Suicidal_thought, Financial_stress,
      Study_satisfaction,Study_hours ]])
-prediction = rfc.predict(user_input)
+prediction = model.predict(user_input)
 
 depression_mapping= {0: 'No', 1: 'Yes'}
 predicted_depression = depression_mapping.get(int(prediction[0]), 'unknown')
