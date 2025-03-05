@@ -2,10 +2,6 @@ import streamlit as st
 import numpy as np
 import pickle
 
-with open ("student_depression.pkl", "rb") as file:
-   rfc= pickle.load(file)
-   
-
 
 st.title('Student Depression Model')
 st.write("This app predicts student mental health!")
